@@ -40,7 +40,8 @@ jobs:
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        projectKey: "weather_project"
+        projectName: demo
+        projectKey: project.key.from.sonar.qube
       run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
         
         
