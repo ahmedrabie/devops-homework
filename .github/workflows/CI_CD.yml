@@ -26,16 +26,15 @@ jobs:
       run: mvn -B package --file pom.xml
       
      
-      -
-        name: Login to DockerHub
-        uses: docker/login-action@v1
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-      -
-        name: Build and push
-        uses: docker/build-push-action@v2
-        with:
-          context: .
-          push: true
-          tags: ahmedrabie90/weather_demo_devops:v1
+    - name: Login to DockerHub
+      uses: docker/login-action@v1
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+          
+    - name: Build with Maven
+      uses: docker/build-push-action@v2
+      with:
+        context: .
+        push: true
+        tags: ahmedrabie90/weather_demo_devops:v1
