@@ -16,7 +16,7 @@ spec:
       containers:
         - name: weatherapp
           image: ahmedrabie90/weather_demo_devops:v1
-	  imagePullPolicy: Always
+          imagePullPolicy: Always            
           ports:
             - containerPort: 80
 
