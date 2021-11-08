@@ -89,7 +89,3 @@ jobs:
           CLUSTER: demo    
       with:
         args: get  svc
-
-
-
- 
