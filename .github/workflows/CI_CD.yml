@@ -63,7 +63,7 @@ jobs:
         tags: ahmedrabie90/weather_demo_devops:${{ github.run_number }}
 
     - name: Update  yaml File with A new Tag
-      run: sed "s/IMAGE_VERSION/$IMAGE_VERSION/g"  weather.yaml > new_weather_image.yml
+      run: sed "s/IMAGE_VERSION/$IMAGE_VERSION/g"  kubernetes/weather.yaml > kubernetes/new_weather_image.yaml
 
     - name: Create deployment
       uses: Eyevinn/action-eks-kubectl@master
