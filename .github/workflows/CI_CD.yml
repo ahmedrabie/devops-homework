@@ -61,7 +61,10 @@ jobs:
         context: .
         push: true
         tags: ahmedrabie90/weather_demo_devops:${{ github.run_number }}
-        
+
+    - name: Update  yaml File with A new Tag
+      run: sed "s/IMAGE_VERSION/$IMAGE_VERSION/g"  weather.yaml > new_weather_image.yml
+
     - name: Create deployment
       uses: Eyevinn/action-eks-kubectl@master
       env:
@@ -71,7 +74,7 @@ jobs:
           REGION: us-east-1
           CLUSTER: demo
       with:
-        args: apply -f kubernetes/weather.yaml
+        args: apply -f kubernetes/new_weather_image.yaml
           
     - name: Get list of Services 
       uses: Eyevinn/action-eks-kubectl@master
