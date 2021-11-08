@@ -72,7 +72,10 @@ jobs:
       with:
         args: apply -f weather.yaml
           
-
+    - name: Get list of Services 
+      uses: Eyevinn/action-eks-kubectl@master
+      with:
+        args: kubectl get  svc
 
 
 
