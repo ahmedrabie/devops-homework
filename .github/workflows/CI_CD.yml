@@ -63,6 +63,8 @@ jobs:
         tags: ahmedrabie90/weather_demo_devops:${{ github.run_number }}
 
     - name: Update  yaml File with A new Tag
+      env:
+         IMAGE_VERSION: ${{ github.run_number }} 
       run: |
         sed "s/IMAGE_VERSION/$IMAGE_VERSION/g"  kubernetes/weather.yaml > kubernetes/new_weather_image.yaml
         cat kubernetes/new_weather_image.yaml
