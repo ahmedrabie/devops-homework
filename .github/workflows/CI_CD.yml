@@ -22,7 +22,8 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
         cache: maven
-  SonarQube:  
+  SonarQube:
+    needs: build
     runs-on: ubuntu-latest
     steps:
     - name: Cache SonarQube packages
