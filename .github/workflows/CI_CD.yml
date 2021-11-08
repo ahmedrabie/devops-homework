@@ -22,10 +22,7 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
         cache: maven
-  SonarQube:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
+        
     - name: Cache SonarQube packages
       uses: actions/cache@v1
       with:
@@ -92,7 +89,3 @@ jobs:
           CLUSTER: demo    
       with:
         args: get  svc
-
-
-
- 
