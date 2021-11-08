@@ -62,7 +62,10 @@ jobs:
         context: .
         push: true
         tags: ahmedrabie90/weather_demo_devops:v1
+        
     - name: Create kubeconfig
       run: |
-        mkdir ${{ secrets.KUBE_CONFIG }} | base64  --decode >{$HOME}/.kube/config
+        mkdir ${HOME}/.kube/config
+        $KUBE_CONFIG
+        echo ${{ secrets.KUBE_CONFIG }} | base64  --decode >{$HOME}/.kube/config
         cat ${HOME}/.kube/config
