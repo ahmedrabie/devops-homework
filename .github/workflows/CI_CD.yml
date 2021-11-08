@@ -70,7 +70,7 @@ jobs:
           REGION: us-east-1
           CLUSTER: demo
       with:
-        args: apply -f weather.yaml
+        args: apply -f kubernetes/weather.yaml
           
     - name: Get list of Services 
       uses: Eyevinn/action-eks-kubectl@master
