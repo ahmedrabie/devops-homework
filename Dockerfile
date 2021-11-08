@@ -12,7 +12,7 @@ RUN  rm -rf /var/cache/apk/*
 ENV APP_NAME=123
 
 RUN touch crontab.tmp \
-    && echo '* *   * * * /opt/checkenv.sh' >> crontab.tmp \
+    && echo '0 * * * * /opt/checkenv.sh' >> crontab.tmp \
     && crontab crontab.tmp \
     && rm -rf crontab.tmp
 
