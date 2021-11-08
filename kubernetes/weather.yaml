@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: weatherapp
-          image: ahmedrabie90/weather_demo_devops:IMAGE_VERSION         
+          image: ahmedrabie90/weather_demo_devops:IMAGE_VERSION    
           ports:
             - containerPort: 80
 
