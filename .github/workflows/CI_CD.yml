@@ -75,7 +75,7 @@ jobs:
     - name: Get list of Services 
       uses: Eyevinn/action-eks-kubectl@master
       with:
-        args: kubectl get  svc
+        args: get  svc
 
 
 
