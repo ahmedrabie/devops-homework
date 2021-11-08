@@ -7,7 +7,7 @@
 <body>
 
 <div>
-    <h3 th:text="'Current Weather Conditions dd - ' + ${currentWeather.name}"></h3>
+    <h3 th:text="'Current Weather Conditions - ' + ${currentWeather.name}"></h3>
     <p th:text="${currentWeather.description}">Description</p>
     <h3>Temperature</h3>
     <p th:text="${currentWeather.temperature} + ' &#8451;'">Temperature</p>
