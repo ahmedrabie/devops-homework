@@ -63,7 +63,7 @@ jobs:
         push: true
         tags: ahmedrabie90/weather_demo_devops:v1
         
-    - name: Create kubeconfig
+    - name: Create deployment
       uses: Eyevinn/action-eks-kubectl@master
       env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
