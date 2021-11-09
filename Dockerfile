@@ -9,7 +9,7 @@ COPY   scripts/checkenv.sh    /opt/checkenv.sh
 RUN  chmod +x /opt/checkenv.sh
 RUN  rm -rf /var/cache/apk/*
 
-ENV APP_NAME=123
+ENV APP_NAME=testapp
 
 RUN touch crontab.tmp \
     && echo '0 * * * * /opt/checkenv.sh' >> crontab.tmp \
